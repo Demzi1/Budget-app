@@ -1,0 +1,12 @@
+.app_container{
+    height: 1000px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    background-image:-webkit-image-set("C:\Users\Abou\Downloads\logo.svg");
+}
+#display{
+    display: flex;
+    justify-content: space-between;
+}
