@@ -1,25 +1,49 @@
 .header-container{
     display: flex;
-    text-align: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-bottom:10px ;
+}
+.header-balance-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-balance-container > * {
+    color: white;
 }
 .header-transaction-container{
     display: flex;
-    flex-direction: row;
+}
+#balance{
+    margin-top: -7px;
+}
+.income{
+    background-color: blue;
+}
+.expense{
+    background-color: red;
 }
 .income,.expense{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
-    border: 1px solid;
+    align-items: center;
     border-radius: 5px;
-    width: 90px;
-    height: 75px;
-    flex-wrap:wrap;
+    border: none;
+    width: 200px;
     margin-right: 10px;
+   
 }
-button{
-    margin-top: 5px;
+
+.income h5,.expense h5{
+    margin-bottom: -7px;
+    color: white;
 }
+.income p,.expense p{
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+}
+

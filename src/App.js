@@ -5,7 +5,6 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import {nanoid} from 'nanoid'
 
-
 const App = () => {
     const [budget, setBudget] = useState( 
       ()=> JSON.parse(localStorage.getItem("budget")) ||
@@ -62,18 +61,18 @@ const App = () => {
     }
 
     const displayElements = display.map(item=>(
-      <div  className key={item.id} onClick={()=>deleteBuget(item.id)}  id='display'>
-        {item.name && <button  >delete</button>}
-        <h4>{item.name}</h4>
-        <h4>{isPositiveInteger(item.amount)?"+" : ""}{item.amount}</h4>
+      <div key={item.id} onClick={()=>deleteBuget(item.id)}  id='display'>
+       <button className='deleteBtn'><i class="fa-solid fa-trash"></i></button>
+        <h4 className='name'>{item.name}</h4>
+        <h4 className='price'>{isPositiveInteger(item.amount)?"+" : ""}{item.amount}</h4>
       </div>
     ))
 
     const originalDataElements = originalData.map(item=>(
-      <div  className key={item.id} onClick={()=>deleteBuget(item.id)}  id='display'>
-        {item.name && <button  >delete</button>}
-        <h4>{item.name}</h4>
-        <h4>{isPositiveInteger(item.amount)?"+" : ""}{item.amount}</h4>
+      <div key={item.id} onClick={()=>deleteBuget(item.id)}  id='display'>
+        <button className='deleteBtn'><i class="fa-solid fa-trash"></i></button>
+        <h4 className='name'>{item.name}</h4>
+        <h4 className='price'>{isPositiveInteger(item.amount)?"+" : ""}{item.amount}</h4>
       </div>
     ))
 
@@ -118,7 +117,7 @@ const App = () => {
               (+prevBudget.amount + (+prevBudget.income)): prevBudget.income,
     
               expense: (prevBudget.amount).startsWith("-")?
-              (+prevBudget.expense  - (-prevBudget.amount) ) : prevBudget.expense,
+              (+prevBudget.expense  + (-prevBudget.amount) ) : prevBudget.expense,
     
               balance:(prevBudget.amount).startsWith("-")?
               (prevBudget.balance - (-prevBudget.amount)) : (prevBudget.balance + (+prevBudget.amount))
@@ -157,7 +156,7 @@ const App = () => {
           ...prevBudget,
           income: Number(amountDeleted[0].amount) < 0? budget.income: budget.income - Number(amountDeleted[0].amount),
 
-          expense:isPositiveInteger( Number(amountDeleted[0].amount)) ? budget.expense  : budget.expense - Number(amountDeleted[0].amount )   ,
+          expense:isPositiveInteger( Number(amountDeleted[0].amount)) ? budget.expense  : budget.expense - (-Number(amountDeleted[0].amount ) )  ,
 
           balance: budget.balance - Number(amountDeleted[0].amount ) 
            }
@@ -171,7 +170,6 @@ const App = () => {
         balance = {budget.balance}
         income={budget.income}
         expense={budget.expense}
-      
         />
         <Hero
           amountVal = {budget.amount}
@@ -186,6 +184,7 @@ const App = () => {
           display = {display}
           
         />
+        
     </div>
   )
 }

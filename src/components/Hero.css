@@ -1,6 +1,65 @@
 .Hero-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
+    margin-top: 10px;
+     
   
+}
+#name-label{
+    margin-bottom: -12px;
+    margin-top: 10px;
+    color: white;
+}
+#amount-label{
+    margin-bottom: -12px;
+    margin-top: 5px;
+    color: white;
+}
+#add-button{
+    margin-top: 10px;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    margin-bottom: 10px;
+   
+
+}
+hr{
+   width: 1000px;
+}
+input{
+    
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 5px;
+    border: none;
+}
+#search-input{
+    position: relative;
+    background-color: rgb(61, 97, 112);
+    border-bottom: 1px solid white;
+}
+#search-icon{
+position: absolute;
+right: 18%;
+bottom: 51%;
+
+}
+label{
+    font-size: 15px;
+    font-weight: bold;
+}
+#items{
+   margin-bottom: -5px;
+   color: white;
+}
+#add-new-transaction{
+    margin-bottom: -5px;
+    color: white;
+}
+#available-items{
+    color: white;
 }

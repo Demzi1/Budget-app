@@ -7,14 +7,16 @@ const Header = (props) => {
         <div className = 'header-balance-container'>
             <h1>REACT BUDGET APP</h1>
             <h3>YOUR BALANCE</h3>
-            <h1>{props.balance}.00</h1>
+            <h1 id='balance'>D{props.balance}.00</h1>
         </div>
         <div className='header-transaction-container'>
             <div className='income'>
-                <h4>INCOME +{props.income}.00</h4>
+                <h5>INCOME</h5>
+                <p>+D{props.income}.00</p>
             </div>
             <div className='expense'>
-               <h4>{!props.expense? "EXPENSES -" : "EXPENSES "} {props.expense}.00</h4>
+               <h5>EXPENSES</h5>
+               <p>-D{props.expense}.00</p>
             </div>
 
         </div>

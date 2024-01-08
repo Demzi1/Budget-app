@@ -1,12 +1,46 @@
 .app_container{
-    height: 1000px;
+  
     width: 1000px;
     display: flex;
     flex-direction: column;
-    margin-left: 200px;
-    background-image:-webkit-image-set("C:\Users\Abou\Downloads\logo.svg");
+    justify-content: center;
+    align-items: center;
+    
 }
 #display{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    height: 40px;
+    margin-bottom: 3px;
+    
 }
+#display .deleteBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 40px;
+    background-color: red;
+    width: 100px;
+    border: none;
+    display: none;
+    cursor: pointer;  
+}
+#display:hover .deleteBtn{
+    display: block; 
+}
+#display:hover .price{
+margin-right: 10px;
+}
+.price{
+    margin-right: 10px;
+}
+.name{
+    margin-left: 10px;
+}
+
+
+
