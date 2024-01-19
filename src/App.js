@@ -61,16 +61,16 @@ const App = () => {
     }
 
     const displayElements = display.map(item=>(
-      <div key={item.id} onClick={()=>deleteBuget(item.id)}  id='display'>
-       <button className='deleteBtn'><i class="fa-solid fa-trash"></i></button>
+      <div key={item.id}   id='display'>
+       <button onClick={()=>deleteBuget(item.id)} className='deleteBtn'><i class="fa-solid fa-trash"></i></button>
         <h4 className='name'>{item.name}</h4>
         <h4 className='price'>{isPositiveInteger(item.amount)?"+" : ""}{item.amount}</h4>
       </div>
     ))
 
     const originalDataElements = originalData.map(item=>(
-      <div key={item.id} onClick={()=>deleteBuget(item.id)}  id='display'>
-        <button className='deleteBtn'><i class="fa-solid fa-trash"></i></button>
+      <div key={item.id}   id='display'>
+        <button onClick={()=>deleteBuget(item.id)} className='deleteBtn'><i class="fa-solid fa-trash"></i></button>
         <h4 className='name'>{item.name}</h4>
         <h4 className='price'>{isPositiveInteger(item.amount)?"+" : ""}{item.amount}</h4>
       </div>

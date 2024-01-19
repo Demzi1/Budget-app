@@ -44,7 +44,9 @@ input{
  
     background-color: rgb(61, 97, 112);
     border-bottom: 1px solid white;
+    color: white;
 }
+
 #search-icon{
 position: absolute;
 right: 0;
