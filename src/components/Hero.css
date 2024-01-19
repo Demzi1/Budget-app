@@ -1,6 +1,8 @@
 .Hero-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
     margin-top: 10px;
      
   
@@ -15,17 +17,7 @@
     margin-top: 5px;
     color: white;
 }
-#add-button{
-    margin-top: 10px;
-    color: white;
-    background-color: blue;
-    border-radius: 5px;
-    border: none;
-    height: 40px;
-    margin-bottom: 10px;
-   
 
-}
 hr{
    width: 1000px;
 }
@@ -69,6 +61,17 @@ label{
 #available-items{
     color: white;
 }
+#add-button{
+    margin-top: 10px;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    margin-bottom: 10px;
+    width: 100%;
+
+}
 
 @media screen and (max-width:550px) {
     .Hero-container{
@@ -77,4 +80,7 @@ label{
     hr{
         width: 300px;
     }
+   .amount,.transaction-name{
+    width: 300px;
+   }
 }

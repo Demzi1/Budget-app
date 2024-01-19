@@ -18,7 +18,6 @@ const Header = (props) => {
                <h5>EXPENSES</h5>
                <p>-D{props.expense}.00</p>
             </div>
-
         </div>
         
     </div>

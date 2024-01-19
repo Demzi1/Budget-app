@@ -29,7 +29,7 @@ const Hero = (props) => {
       <input 
         type='text' 
         placeholder='Name of transaction'
-        id='tansaction-name'
+        id='transaction-name'
         name='transactionName'
         value={props.transactionName}
         onChange={props.handleChange}
@@ -37,7 +37,7 @@ const Hero = (props) => {
       <label id='amount-label' htmlFor='Amount'>Amount</label> <br/>
       <input type='number' 
       placeholder='Negative expense positive income' 
-      id='Amount'
+      id='amount'
       name= 'amount'
       value={props.amountVal}
       onChange={props.handleChange}
